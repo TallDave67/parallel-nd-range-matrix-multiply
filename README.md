@@ -50,7 +50,6 @@ I placed this in my .bashrc file so the dpcpp compiler can be found.
 
 ## Output
 
-> ~/dev/moderncpp/parallel-nd-range-matrix-multiply/oneapi$ ./build/nd-range-matrix-multiply 
 > 62.8150 61.0702 62.0380 61.6559 64.7695 58.2775 57.9608 64.3574 62.7079 58.1336 66.0439 59.8816 61.3521 59.2256 56.7127 61.9509 
 > ...
 > 69.8101 64.6917 63.5820 67.9579 64.9832 61.7401 67.3540 66.4323 65.9917 70.3817 66.8222 60.0008 68.0923 65.6087 64.6225 66.2730 
