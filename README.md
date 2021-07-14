@@ -28,7 +28,17 @@ This code came directly from Intel.
 
 [ND Range Matrix Multiply](https://github.com/Apress/data-parallel-CPP/blob/main/samples/Ch04_expressing_parallelism/fig_4_13_nd_range_matrix_multiply.cpp)
 
-Compiler gave warning about loop not being unrolled.  Thomas Kim discusses how this is a false error and the loop is actually unrolled.
+The dpcpp compiler gave a warning about loop not being unrolled.  
+
+> parallel-nd-range-matrix-multiply/oneapi/nd-range-matrix-multiply.cpp:51:47: warning: loop not unrolled:
+
+> the optimizer was unable to perform the requested transformation;
+
+> the transformation might be disabled or specified as part of an unsupported transformation ordering [-Wpass-failed=transform-warning]
+
+> h.parallel_for(nd_range{global, local}, [=](nd_item<2> it) {
+
+Postings seemed to indicate that the warning was erroneously generated and that indeed the loop is actually unrolled.  See Thomas Kim's video presentation.
 
 [Ignore Warnng about Loop not being Unrolled - @ 23m 24s](https://www.youtube.com/watch?v=_7SNKgw54Yk)
 
@@ -36,7 +46,7 @@ I wanted to see columnar output, so followed Antonio's suggestion.
 
 [Padding a float](https://stackoverflow.com/questions/22509972/how-can-i-pad-a-float-with-leading-zeros-when-using-cout-operator)
 
-Olivier Li showed me how to time code to microsecond accuracy for performance checking.
+Olivier Li showed me how to time the running code to microsecond accuracy for performance checking.
 
 [Timing with Chrono](https://stackoverflow.com/questions/21856025/getting-an-accurate-execution-time-in-c-micro-seconds)
 
