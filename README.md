@@ -10,6 +10,12 @@ Intel(R) oneAPI DPC++/C++ Compiler 2021.3.0 (2021.3.0.20210619)
 
 ## Steps
 
+*I placed this in my .bashrc file so the dpcpp compiler can be found.*
+
+> *export ONEAPI_DIR="/opt/intel/oneapi"*
+
+> *[ -s "$ONEAPI_DIR/setvars.sh" ] && \. "$ONEAPI_DIR/setvars.sh"  # initialize oneAPI environment*
+ 
 cd oneapi
 
 ./build.sh
@@ -49,14 +55,6 @@ I wanted to see columnar output, so followed Antonio's suggestion.
 Olivier Li showed me how to time the running code to microsecond accuracy for performance checking.
 
 [Timing with Chrono](https://stackoverflow.com/questions/21856025/getting-an-accurate-execution-time-in-c-micro-seconds)
-
-### Compilation
-
-I placed this in my .bashrc file so the dpcpp compiler can be found.
-
-> export ONEAPI_DIR="/opt/intel/oneapi"
-
-> [ -s "$ONEAPI_DIR/setvars.sh" ] && \. "$ONEAPI_DIR/setvars.sh"  # initialize oneAPI environment
 
 ## Output
 
